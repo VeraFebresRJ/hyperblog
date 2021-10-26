@@ -1,0 +1,56 @@
+/c/users/ricardo/mark1
+
+git init 	# Crea la “base de datos” que llevará los cambios atómicos
+		# (independientes) que se harán en el sistema.
+
+ls -al		# Para visualizar archivos ocultos.
+
+code		# Abre el Visual Studion Code.
+
+git status	# Requiere que se agregue un archivo.
+{
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        #Notas.txt
+        historia.txt
+}
+
+
+git add historia.txt	# Para agregar a la memoria RAM (cached).
+
+git rm historia.txt	# Para sacar el archivo (de su estado).
+
+git commit -m "Este es el primer comit de este archivo"	# Envía los cambios al
+							# repositorio, NECESITA
+							# LA IDENTIDAD.
+
+git config 		# Muestra ayuda para cada una de las operaciones.
+
+git config --list 	# Muestra la configuración por defecto de Git y lo que
+			# falta 
+
+git config --list --show-origin	# Para el nombre e email de modificaciones de	
+				# cada usuario.
+				# "-" se usa para una sola letra "--" Indica que
+				# se va a usar una palabra.
+
+git config --global user.name "Ricardo Vera"
+
+git config --global user.email "RicardoVeraFebres@gmail.com"
+
+git commit -m "Este es el primer comit de este archivo"	# Ahora sí se puede.
+
+cat historia.txt	# Para visualizar el contenido del *.TXT 
+
+code historia.txt	# Para editar el contenido del archivo
+«        modified:   historia.txt» # Indica que el archivo se modificó
+
+git commit -m "Cambios al archivo de historia para reflejar la edad correcta"
+			# No cambia porque necesita el comando "add"
+
+git add . historia
+			# [.] representa la carpeta actual	
