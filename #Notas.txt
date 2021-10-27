@@ -72,12 +72,49 @@ git log historia.txt
 Date:   Tue Oct 26 10:28:39 2021 -0400
 
     Este es el primer comit de este archivo
-»
+git »
 			# El TAG la indicación de donde se está en este momento.
 			# "HEAD -> master" manifiesta que hace poco fue editado.
 
 
      09. Analizar cambios en los archivos de tu proyecto con Git • 09/24
+
+$ git log historia.txt
+{
+commit 5d14beccb107fd7b60dd498d0225669a47b08303 (HEAD -> master)
+Author: Ricardo Vera <RicardoVeraFebres@gmail.com>
+Date:   Wed Oct 27 10:53:39 2021 -0400
+
+    Agregamos un cambio a su estatura
+
+commit d5845f658b8d2dff74e4aa1eeef3dc96fc442c13
+Author: Ricardo Vera <RicardoVeraFebres@gmail.com>
+Date:   Tue Oct 26 11:47:09 2021 -0400
+
+    Este es el primer comit de este archivo
+}
+
+
+git show historia.txt
+{
+commit 5d14beccb107fd7b60dd498d0225669a47b08303 (HEAD -> master) # Último commit
+Author: Ricardo Vera <RicardoVeraFebres@gmail.com>
+Date:   Wed Oct 27 10:53:39 2021 -0400
+
+    Agregamos un cambio a su estatura
+
+diff --git a/historia.txt b/historia.txt # agarra la versión anterior y la compara
+index 2b1ecf0..c0caafa 100644		 # con la nueva
+--- a/historia.txt
++++ b/historia.txt
+@@ -3,4 +3,6 @@ Esta es la historia de Freddy Vega
+- Freddy Vega tiene 33 años y nació en Colombia,
++ Freddy Vega tiene 34 años y nació en Colombia, 	# Aquí hubo un cambio.
++ viviendo en todo el mundo				# Esta línea se agregó.
+ 
+ Hoy hablaremos de su historia.
+\ No newline at the end of the file
+}
 
 pwd 			# Sirve para imprimir el "directorio de trabajo actual".
 
@@ -85,25 +122,21 @@ ls 			# Para visualizar.
 
 code historia.txt	# Abre el archivo en el VSC
 
-git show historia.txt
+git add .		# Para agregarlo
+
+commit
 {
-commit d5845f658b8d2dff74e4aa1eeef3dc96fc442c13 (HEAD -> master)
-Author: Ricardo Vera <RicardoVeraFebres@gmail.com>
-Date:   Tue Oct 26 11:47:09 2021 -0400
+Agregamos un cambio a su estatura # Escribímos esto para el COMMIT
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Changes to be committed:
+#       modified:   #Notas.txt
+#       modified:   historia.txt
+#	
+} # Para salir del mensaje presionar: Escape + Shift + Z + Z
 
-    Este es el primer comit de este archivo
+			
 
-diff --git a/historia.txt b/historia.txt
-index e562d97..2b1ecf0 100644
---- a/historia.txt
-+++ b/historia.txt
-@@ -1,5 +1,6 @@
- Esta es la historia de Freddy Vega
 
--Freddy Vega tiene 32 años y nació en Colombia
-+Freddy Vega tiene 33 años y nació en Colombia,
-+viviendo en todo el mundo
-
- Hoy hablaremos de su historia.
-\ No newline at end of file 			# Cuando carece de un enter 		
-}						# adicional.
