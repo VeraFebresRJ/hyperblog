@@ -1,3 +1,11 @@
+     Índice
+
+08. Crea un repositorio de Git y haz tu primer commit • 08/43
+09. Analizar cambios en los archivos de tu proyecto con Git • 09/24
+
+
+     08. Crea un repositorio de Git y haz tu primer commit • 08/43
+
 /c/users/ricardo/mark1
 
 git init 	# Crea la “base de datos” que llevará los cambios atómicos
@@ -22,7 +30,7 @@ Untracked files:
 
 git add historia.txt	# Para agregar a la memoria RAM (cached).
 
-git rm historia.txt	# Para sacar el archivo (de su estado).
+git rm historia.txt	# Para sacar el archivo (de su estado). #REMOVE
 
 git commit -m "Este es el primer comit de este archivo"	# Envía los cambios al
 							# repositorio, NECESITA
@@ -52,5 +60,50 @@ code historia.txt	# Para editar el contenido del archivo
 git commit -m "Cambios al archivo de historia para reflejar la edad correcta"
 			# No cambia porque necesita el comando "add"
 
-git add . historia
-			# [.] representa la carpeta actual	
+git add . historia.txt	# Cuando hay más de un archivo y se necesita agregarlos
+			# se usa [.]; representa la carpeta actual	
+
+git status
+«modified:   historia.txt»
+			# En verde, manifiesta que se agregó. 
+
+git log historia.txt
+«Author: Ricardo Vera <RicardoVeraFebres@gmail.com>
+Date:   Tue Oct 26 10:28:39 2021 -0400
+
+    Este es el primer comit de este archivo
+»
+			# El TAG la indicación de donde se está en este momento.
+			# "HEAD -> master" manifiesta que hace poco fue editado.
+
+
+     09. Analizar cambios en los archivos de tu proyecto con Git • 09/24
+
+pwd 			# Sirve para imprimir el "directorio de trabajo actual".
+
+ls 			# Para visualizar.
+
+code historia.txt	# Abre el archivo en el VSC
+
+git show historia.txt
+{
+commit d5845f658b8d2dff74e4aa1eeef3dc96fc442c13 (HEAD -> master)
+Author: Ricardo Vera <RicardoVeraFebres@gmail.com>
+Date:   Tue Oct 26 11:47:09 2021 -0400
+
+    Este es el primer comit de este archivo
+
+diff --git a/historia.txt b/historia.txt
+index e562d97..2b1ecf0 100644
+--- a/historia.txt
++++ b/historia.txt
+@@ -1,5 +1,6 @@
+ Esta es la historia de Freddy Vega
+
+-Freddy Vega tiene 32 años y nació en Colombia
++Freddy Vega tiene 33 años y nació en Colombia,
++viviendo en todo el mundo
+
+ Hoy hablaremos de su historia.
+\ No newline at end of file 			# Cuando carece de un enter 		
+}						# adicional.
