@@ -122,9 +122,12 @@ ls 			# Para visualizar.
 
 code historia.txt	# Abre el archivo en el VSC
 
+# Se colocó en la línea 09:
+# 09. En camara parece alto pero la verdad no es tan alto.
+
 git add .		# Para agregarlo
 
-commit
+git commit
 {
 Agregamos un cambio a su estatura # Escribímos esto para el COMMIT
 # Please enter the commit message for your changes. Lines starting
@@ -135,8 +138,20 @@ Agregamos un cambio a su estatura # Escribímos esto para el COMMIT
 #       modified:   #Notas.txt
 #       modified:   historia.txt
 #	
-} # Para salir del mensaje presionar: Escape + Shift + Z + Z
+} 
+# El signo [#] corresponde a comentarios.
+# Escape + I : Funciona para insertar texto.
+# Para salir del mensaje presionar: Escape | Shift + Z + Z | 
+# Esto fuerza el envío del commit porque guarda el archivo
 
-			
 
 
+# Se colocó en la línea 10:
+# 10. Se agregó Hoy es el CEO de Platzi.			
+
+git add .
+
+git commit
+
+git diff (argumento)	# debe tener el código que acompaña el"commit".
+			# Compara commits y los cambios que se hacen.
